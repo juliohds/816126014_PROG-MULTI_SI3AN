@@ -10,18 +10,18 @@ export class FeedPage {
   slides = [
     {
       title: "Esse é o titulo do primeiro slide",
-      description: "Essa é a <b>Descrição</b> Hahaha.",
-      image:"assets/imgs/Akuma3.gif",
+      description: "Goku SS",
+      image:"assets/imgs/goku1.gif",
     },
     {
-      title: "Professor me da nota",
-      description: "<b>SÃO 4 HORAS DA MANHÃ</b> socorro ;-;",
-      image: "assets/imgs/Akuma2.gif",
+      title: "Professor me da nota1",
+      description: "Goku SS2",
+      image: "assets/imgs/goku2.gif",
     },
     {
       title: "Ionics é zica",
-      description: "essa é a terceira",
-      image: "assets/imgs/Akuma1.gif",
+      description: "Goku SS3",
+      image: "assets/imgs/goku3.gif",
     }
   ];
 }
