@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Encerrar chamado</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+          <ion-list>
+              <ion-item>
+                  <ion-label>Fila</ion-label>
+                  <ion-select [(ngModel)]="fila">
+                    <ion-option value="nvproj">Novos Projetos</ion-option>
+                    <ion-option value="manven">Manutenção Sistema de Vendas</ion-option>
+                    <ion-option value="manerp">Manutenção Sistema ERP</ion-option>
+                    <ion-option value="serv">Servidores</ion-option>
+                    <ion-option value="rede">Redes</ion-option>
+                    <ion-option value="tel">Telefonia</ion-option>
+                    <ion-option value="desk">Desktops</ion-option>
+                  </ion-select>
+              </ion-item>
+              <ion-item>
+                  <ion-list ion-item *ngFor="let item of items">
+                      <p><ion-item><ion-checkbox color="blue" checked="false"></ion-checkbox></ion-item><b>Descrição: </b>{{ item.desc}} <b>Status:</b> {{item.status}}</p>
+                      <p><b>Abertura: </b>{{item.dataAb}}<b> Fechamento: </b>{{item.dataAb}}</p>
+                    </ion-list>
+                </ion-item>
+      </ion-list>
+      <div style="width: 100%; padding: center; text-align:center;">
+          <button ion-button >Encerrar chamados</button>
+        </div>
+    </ion-list>
+  </ion-content>

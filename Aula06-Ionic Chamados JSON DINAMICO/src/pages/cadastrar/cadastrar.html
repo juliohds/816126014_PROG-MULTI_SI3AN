@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cadastrar chamado
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label>Fila</ion-label>
+            <ion-select [(ngModel)]="selectedId" (ionChange)="onSelectChange($event)">
+              <ion-option *ngFor="let fila of lista_filas; let i = index" [value] = fila.id>{{fila.nome}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label floating>Descrição</ion-label>
+          <ion-input type="text" [(ngModel)]="descricao"></ion-input>
+        </ion-item>
+        <br>
+            <div style="width: 100%; padding: right; text-align:right;">
+              <button ion-button (click)="cadastrarClick($event)">Cadastrar</button>
+            </div>
+      </ion-list>
+</ion-content>

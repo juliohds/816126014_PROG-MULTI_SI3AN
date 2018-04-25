@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Lista de chamados
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+        <ion-list>
+            <ion-item>
+                <ion-label>Fila</ion-label>
+                <ion-select [(ngModel)]="selectedId" (ionChange)="onSelectChange($event)">
+                  <ion-option *ngFor="let fila of lista_filas; let i = index" [value] = fila.id>{{fila.nome}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-list ion-item *ngFor="let item of lista_chamados">
+                    <p><b>Descrição: </b>{{item.descricao}} <b>Status:</b> {{item.status}}</p>
+                    <p><b>Abertura: </b>{{item.dt_abertura }}<b> Fechamento: </b>{{item.dt_fechamento}}</p>
+                  </ion-list>
+              </ion-item>
+    </ion-list>
+  </ion-list>
+</ion-content>
