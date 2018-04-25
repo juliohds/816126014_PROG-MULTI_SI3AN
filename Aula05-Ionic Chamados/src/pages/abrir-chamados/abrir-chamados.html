@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     {{titulo}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor= "let chamado of chamados" (click)="irParaDestino(chamado)"> 
+      <h2>
+        {{chamado.nome}}
+      </h2>
+    </ion-item>
+  </ion-list>
+
+  
+
+  <ion-item>
+    <ion-label stacked>Descrição do chamado</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  
+
+  
+  <button ion-button color="secondary">Enviar</button>
+  <button ion-button color="danger"   >Cancelar</button>
+      
+   
+</ion-content>
